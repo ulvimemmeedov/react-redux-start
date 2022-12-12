@@ -48,9 +48,9 @@ Preview
   npm run preview
 ```
 
-## Testler
+## Tests
 
-Testleri çalıştırmak için aşağıdaki komutu çalıştırın
+Run the following command to run the tests
 
 ```bash
   npm run test
