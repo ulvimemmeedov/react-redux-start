@@ -60,8 +60,17 @@ Test example
 
 ```js
 import { describe, it, expect } from 'vitest';
+import { render, screen } from '@testing-library/react';
+import App from './App';
 
-describe('something truthy and falsy', () => {
+describe('App', () => {
+    it('renders headline', () => {
+        render(<App/>);
+
+        screen.debug();
+
+    });
+
     it('true to be true', () => {
         expect(true).toBe(true);
     });
@@ -74,6 +83,6 @@ describe('something truthy and falsy', () => {
 
 ## Used technologies
 
-**client:** React, Redux, Redux tool kit, TailwindCSS, ViteJs, Vitest
+**stack:** React, Redux, Redux tool kit, TailwindCSS, ViteJs, Vitest, Bootstrap, Reactstrap, Material Tailwind
 
  

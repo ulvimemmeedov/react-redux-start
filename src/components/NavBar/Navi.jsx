@@ -5,7 +5,8 @@ import {
     Typography,
     IconButton,
 } from "@material-tailwind/react";
-
+import { navList } from "./navList";
+import appConfig from "../../app/config";
 export default function Navi() {
     const [openNav, setOpenNav] = useState(false);
 
@@ -16,53 +17,8 @@ export default function Navi() {
         );
     }, []);
 
-    const navList = (
-        <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-            <Typography
-                as="li"
-                variant="small"
-                color="blue-gray"
-                className="p-1 font-normal"
-            >
-                <a href="#" className="flex items-center">
-                    Pages
-                </a>
-            </Typography>
-            <Typography
-                as="li"
-                variant="small"
-                color="blue-gray"
-                className="p-1 font-normal"
-            >
-                <a href="#" className="flex items-center">
-                    Account
-                </a>
-            </Typography>
-            <Typography
-                as="li"
-                variant="small"
-                color="blue-gray"
-                className="p-1 font-normal"
-            >
-                <a href="#" className="flex items-center">
-                    Blocks
-                </a>
-            </Typography>
-            <Typography
-                as="li"
-                variant="small"
-                color="blue-gray"
-                className="p-1 font-normal"
-            >
-                <a href="#" className="flex items-center">
-                    Docs
-                </a>
-            </Typography>
-        </ul>
-    );
-
     return (
-        <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4 dark:bg-black">
+        <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4 bg-gray-100">
             <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
                 <Typography
                     as="a"
@@ -70,7 +26,7 @@ export default function Navi() {
                     variant="small"
                     className="mr-4 cursor-pointer py-1.5 font-normal"
                 >
-                    <span>App</span>
+                    <span>{appConfig.appName}</span>
                 </Typography>
                 <div className="hidden lg:block">{navList}</div>
                 <IconButton

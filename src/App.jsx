@@ -1,29 +1,12 @@
-import React from 'react'
-import './App.css'
+import React from 'react';
+import './assets/App.css';
 import {
-  createBrowserRouter,
   RouterProvider,
-  Route,
 } from "react-router-dom";
-import Layout from './pages/Layout';
-import ErrorPage from './pages/Errors/ErrorPage';
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout />,
-    errorElement: <ErrorPage />,
-    children: [
-      // {
-      //   path: "contacts/:contactId",
-      //   element: <Contact />,
-      // },
-    ],
-  },
-]);
+import router from './app/routes';
 
 function App() {
   return <RouterProvider router={router} />
 }
 
-export default App
+export default App;
